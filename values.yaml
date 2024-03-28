@@ -1,0 +1,96 @@
+global:
+  istio:
+    ingressGateway:
+      namespace: istio-ingress
+
+subDomain: ververica
+
+encryptedLicense: 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 
+
+ververica-platform:
+  vvp:
+    license:
+      data: 
+        kind: License
+        apiVersion: v1
+        metadata: 
+          id: 0ef5dbbd-14fc-4fce-83d6-cca4010ca4a9
+          createdAt: 2024-03-22T10:56:55.230274Z
+          annotations: 
+            signature: iQIcBAABCAAGBQJl/WP3AAoJEKio0mvM9xxRSwYQAIGZds6do/Qb+LBjMSXGIi/T9WVjohQgEJrGusqBBIKhy64nMk7GGpDHAPPUWA9Ab9CjknhBWs9Nwh5/b/XnAebF3zFaoI3QyN8NO8tRdDxxNuFhx8Q9Ziy+5//3MTVRos6mvtwmPhizMSgYs7w3XaePr/oIqWSsMLuUUe0zN+LobHMqr2CgC7wQItPpT+Fxgj5Kqivz7r9p5ROD47RrZEXo6t+SZUStMZkItIPmJiRrdeFTzECq8Y2DuzCA3d8JSN5ORhK97Cd/7TYwVRE5gzjq5DV4v/IY/ZX0hAGNWeCHYFOJ6/SvNQMDKNcUzYtB4VTTfjOeW6C/reVgmtJyFlEieTLiiMbtXAB7DVbbl/G5I8ijGVHK777IqsuPVALcDLexmDpSejyfhqoTY/0MUbgbbs/grmqtFr0ekSF/iP26iCZGBpG3iCBJxRhirDdzCKh9tha+ezT0/+TTJVjehy2aEjx4QS62evhHh5jpHlTH/S4VXEkwi06DB61g7xgJpKOFq580U6eHgSmmN9fuejsGHUMZ5gu7dOg1Tp9KIIW9kCDbj0Qx+BpnyipStoQXeLGdgnnMXpp8JQqE3VoULzf6mqyLGlX8mFj/BOqvJOo/cDhKZ+Tm72EYf7FCCbdgzK5igqCQdXp0DNdjqRuhvesRRu9eJ8/qxr9MsZZeS4hs
+            licenseSpec: ewogICJsaWNlbnNlSWQiIDogIjBlZjVkYmJkLTE0ZmMtNGZjZS04M2Q2LWNjYTQwMTBjYTRhOSIsCiAgImxpY2Vuc2VkVG8iIDogIlN0ZWFkZm9yY2UiLAogICJleHBpcmVzIiA6ICIyMDI0LTA3LTAxVDAwOjAwOjAwWiIsCiAgInBhcmFtcyIgOiB7CiAgICAicXVvdGEudHlwZSIgOiAiTElNSVRFRCIsCiAgICAicXVvdGEuY3B1IiA6ICI1MDAiLAogICAgIm92ZXJ1c2UuY3B1IiA6ICIwIiwKICAgICJ0cmlhbCIgOiAiZmFsc2UiLAogICAgIm5vdEZvclJlc2FsZSIgOiAiZmFsc2UiCiAgfQp9
+        spec: 
+          licenseId: 0ef5dbbd-14fc-4fce-83d6-cca4010ca4a9
+          licensedTo: Steadforce
+          expires: 2024-07-01T00:00:00Z
+          params: 
+            quota.type: LIMITED
+            quota.cpu: 500
+            overuse.cpu: 0
+            trial: false
+            notForResale: false
+    ### Configure VVP to use a local SQLite database
+    persistence:
+      type: local
+
+    ### Configure Minio for Universal Blob Storage
+    blobStorage:
+      baseUri: s3://steadops-playground-bucket
+      s3:
+        endpoint: http://minio.minio.svc.cluster.local:80
+
+    ### Configure some global defaults for Deployments in this instance of Ververica Platform
+    globalDeploymentDefaults: |
+      spec:
+        state: RUNNING
+        template:
+          spec:
+            resources:
+              jobmanager:
+                cpu: 0.5
+                memory: 1G
+              taskmanager:
+                cpu: 0.5
+                memory: 1G
+            flinkConfiguration:
+              state.backend: filesystem
+              taskmanager.memory.managed.fraction: 0.0 # no managed memory needed for filesystem statebackend
+              high-availability: kubernetes
+              metrics.reporter.prom.class: org.apache.flink.metrics.prometheus.PrometheusReporter
+              execution.checkpointing.interval: 10s
+              execution.checkpointing.externalized-checkpoint-retention: RETAIN_ON_CANCELLATION
+
+    ### Decrease the JobGraph translation thread pool size. This reduces our worst-case memory
+    ### requirements by reducing the number of translations that can happen in parallel.
+    ###
+    ### See also: https://docs.ververica.com/platform_operations/advanced/sql.html
+    sqlService:
+      pool:
+        coreSize: 1
+        maxSize: 1
+
+          
+  blobStorageCredentials:
+    existingSecret: minio-cred-secret-mirror
+
+  ### Allow Ververica Platform to manage Apache Flink deployments in "vvp-jobs" namespace
+  rbac:
+    additionalNamespaces:
+    - ververica-jobs
+
+  ### Reduce gateway container memory requests.
+  gateway:
+    resources:
+      limits:
+        memory: 1Gi
+      requests:
+        memory: 1Gi
+
+  licenseConfigPath: file:/etc/vvp-licenses/license.yaml
+  volumes:
+    - name: license
+      secret:
+        secretName: ververica-license
+  volumeMounts:
+    - name: license
+      mountPath: /etc/vvp-licenses/

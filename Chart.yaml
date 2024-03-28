@@ -1,0 +1,7 @@
+apiVersion: v2
+name: ververica-platform
+version: 0.1.0
+dependencies:
+- name: ververica-platform
+  version: 5.8.2
+  repository: https://charts.ververica.com
