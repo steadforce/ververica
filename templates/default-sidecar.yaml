@@ -9,5 +9,6 @@ spec:
     - "./*"
     - "istio-system/*"
     - "minio/*"
+    - "nessie/*"
     - "ververica-jobs/*"
 {{ end }}
