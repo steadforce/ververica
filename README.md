@@ -64,8 +64,3 @@ You can use this command to check if the output is as you expect. The `-a` param
 helm feature `.Capabilities.APIVersions.Has` to determine if a `CR` is installable in the cluster or not. Since
 helm templating is designed to work offline we have to list the supported `CR`. Using `.Capabilities.APIVersions.Has`
 feature in templating prevents sync errors in argo-cd if a `CR` can't be applied since its `CRD` isn't ready.
-
-==========
-
-SET ververica-platform.licenseConfigPath: to a config map by using a sealed secret for the license
-./kubeseal --fetch-cert --controller-name sealed-secrets --controller-namespace sealed-secrets --kubeconfig .kubeconfig
