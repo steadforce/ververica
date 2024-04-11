@@ -9,26 +9,6 @@ encryptedLicense: BABVFjiX5G+ma6uBkQfyvdIfct8FdbEKhmmR2ZSE0DxQu67oOKb9H3amzPqSiJ
 
 ververica-platform:
   vvp:
-    license:
-      data: 
-        kind: License
-        apiVersion: v1
-        metadata: 
-          id: 0ef5dbbd-14fc-4fce-83d6-cca4010ca4a9
-          createdAt: 2024-03-22T10:56:55.230274Z
-          annotations: 
-            signature: iQIcBAABCAAGBQJl/WP3AAoJEKio0mvM9xxRSwYQAIGZds6do/Qb+LBjMSXGIi/T9WVjohQgEJrGusqBBIKhy64nMk7GGpDHAPPUWA9Ab9CjknhBWs9Nwh5/b/XnAebF3zFaoI3QyN8NO8tRdDxxNuFhx8Q9Ziy+5//3MTVRos6mvtwmPhizMSgYs7w3XaePr/oIqWSsMLuUUe0zN+LobHMqr2CgC7wQItPpT+Fxgj5Kqivz7r9p5ROD47RrZEXo6t+SZUStMZkItIPmJiRrdeFTzECq8Y2DuzCA3d8JSN5ORhK97Cd/7TYwVRE5gzjq5DV4v/IY/ZX0hAGNWeCHYFOJ6/SvNQMDKNcUzYtB4VTTfjOeW6C/reVgmtJyFlEieTLiiMbtXAB7DVbbl/G5I8ijGVHK777IqsuPVALcDLexmDpSejyfhqoTY/0MUbgbbs/grmqtFr0ekSF/iP26iCZGBpG3iCBJxRhirDdzCKh9tha+ezT0/+TTJVjehy2aEjx4QS62evhHh5jpHlTH/S4VXEkwi06DB61g7xgJpKOFq580U6eHgSmmN9fuejsGHUMZ5gu7dOg1Tp9KIIW9kCDbj0Qx+BpnyipStoQXeLGdgnnMXpp8JQqE3VoULzf6mqyLGlX8mFj/BOqvJOo/cDhKZ+Tm72EYf7FCCbdgzK5igqCQdXp0DNdjqRuhvesRRu9eJ8/qxr9MsZZeS4hs
-            licenseSpec: ewogICJsaWNlbnNlSWQiIDogIjBlZjVkYmJkLTE0ZmMtNGZjZS04M2Q2LWNjYTQwMTBjYTRhOSIsCiAgImxpY2Vuc2VkVG8iIDogIlN0ZWFkZm9yY2UiLAogICJleHBpcmVzIiA6ICIyMDI0LTA3LTAxVDAwOjAwOjAwWiIsCiAgInBhcmFtcyIgOiB7CiAgICAicXVvdGEudHlwZSIgOiAiTElNSVRFRCIsCiAgICAicXVvdGEuY3B1IiA6ICI1MDAiLAogICAgIm92ZXJ1c2UuY3B1IiA6ICIwIiwKICAgICJ0cmlhbCIgOiAiZmFsc2UiLAogICAgIm5vdEZvclJlc2FsZSIgOiAiZmFsc2UiCiAgfQp9
-        spec: 
-          licenseId: 0ef5dbbd-14fc-4fce-83d6-cca4010ca4a9
-          licensedTo: Steadforce
-          expires: 2024-07-01T00:00:00Z
-          params: 
-            quota.type: LIMITED
-            quota.cpu: 500
-            overuse.cpu: 0
-            trial: false
-            notForResale: false
     ### Configure VVP to use a local SQLite database
     persistence:
       type: local
