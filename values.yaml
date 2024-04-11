@@ -26,7 +26,7 @@ ververica-platform:
           # clientId: set via environment variable referencing a secret
           # clientSecret: set via environment variable referencing a secret
           redirectUri: "{baseUrl}/{action}/oauth2/code/{registrationId}"
-          clientAuthenticationMethod: basic
+          clientAuthenticationMethod: client_secret_basic
           authorizationGrantType: authorization_code
           scope:
           - openid
@@ -78,17 +78,17 @@ ververica-platform:
         maxSize: 1
 
   env: 
-  - name: vvp.auth.oidc.registration.clientId
+  - name: vvp_auth_oidc_registration_clientId
     valueFrom:
       secretKeyRef:
         name: azure-app-secrets
         key: clientId
-  - name: vvp.auth.oidc.registration.clientSecret
+  - name: vvp_auth_oidc_registration_clientSecret
     valueFrom:
       secretKeyRef:
         name: azure-app-secrets
         key: clientSecret
-  - name: vvp.auth.oidc.registration.issuerUri
+  - name: vvp_auth_oidc_registration_issuerUri
     valueFrom:
       secretKeyRef:
         name: azure-app-secrets
