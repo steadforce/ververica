@@ -35,7 +35,7 @@ ververica-platform:
           # issuerUri: set via environment variable referencing a secret
           # make sure, spring-boot does not fetch user info
           # see https://github.com/spring-projects/spring-security/issues/7679
-          user-info-uri:
+          userInfoUri:
           userNameAttribute: preferred_username
     ### Configure VVP to use a local SQLite database
     persistence:
