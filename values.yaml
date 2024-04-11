@@ -26,7 +26,7 @@ ververica-platform:
           # clientId: set via environment variable referencing a secret
           # clientSecret: set via environment variable referencing a secret
           redirectUri: "{baseUrl}/{action}/oauth2/code/{registrationId}"
-          clientAuthenticationMethod: client_secret_basic
+          clientAuthenticationMethod: basic
           authorizationGrantType: authorization_code
           scope:
           - openid
