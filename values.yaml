@@ -32,7 +32,7 @@ ververica-platform:
           - openid
           - profile
         provider:
-          # issuer-uri: set via environment variable referencing a secret
+          # issuerUri: set via environment variable referencing a secret
           # make sure, spring-boot does not fetch user info
           # see https://github.com/spring-projects/spring-security/issues/7679
           user-info-uri:
@@ -88,11 +88,11 @@ ververica-platform:
       secretKeyRef:
         name: azure-app-secrets
         key: clientSecret
-  - name: vvp.auth.oidc.registration.issuer-uri
+  - name: vvp.auth.oidc.registration.issuerUri
     valueFrom:
       secretKeyRef:
         name: azure-app-secrets
-        key: issuer-uri
+        key: issuerUri
 
   blobStorageCredentials:
     existingSecret: minio-cred-secret-mirror
