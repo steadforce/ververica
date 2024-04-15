@@ -41,6 +41,10 @@ ververica-platform:
     persistence:
       type: local
 
+    ui:
+      linkTemplates:
+        metrics: https://cluster-grafana.steadops.local.steadforce.com/d/6x9EvVBnz/flink-monitoring-prometheus?var-deploymentId=<%= deploymentId %>
+
     ### Configure Minio for Universal Blob Storage
     blobStorage:
       baseUri: s3://steadops-playground-bucket
