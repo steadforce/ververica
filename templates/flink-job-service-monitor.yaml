@@ -3,6 +3,8 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: flink-jobs
+  labels:
+    prometheus: cluster-monitoring
 spec:
   selector:
     # Match the above service by labels
