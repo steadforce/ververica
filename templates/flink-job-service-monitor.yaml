@@ -1,0 +1,24 @@
+{{- if .Capabilities.APIVersions.Has "monitoring.coreos.com/v1" }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: flink-jobs
+spec:
+  selector:
+    # Match the above service by labels
+    matchLabels:
+      system: ververica-platform
+      app: flink-job
+      component: metrics
+  endpoints:
+    - port: metrics
+      interval: 2s
+  # Preserve data about each Flink pod
+  # to scope the scraped metrics
+  podTargetLabels:
+    - compontent
+    - deploymentId
+    - deploymentName
+    - jobId
+    - vvpNamespace
+{{- end }}
