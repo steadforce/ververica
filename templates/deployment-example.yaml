@@ -30,7 +30,7 @@ spec:
         flinkVersion: 1.17
         flinkImageRegistry: registry.ververica.com/v2.12
         flinkImageRepository: flink
-        flinkImageTag: 1.17.2-stream1-scala_2.12
+        flinkImageTag: 1.17.2-stream1-scala_2.12-java11
       flinkConfiguration:
         execution.checkpointing.externalized-checkpoint-retention: RETAIN_ON_CANCELLATION
         execution.checkpointing.interval: 10s
