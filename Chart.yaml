@@ -5,3 +5,6 @@ dependencies:
 - name: ververica-platform
   version: 5.8.2
   repository: https://charts.ververica.com
+- name: ververica-platform-crd
+  version: 1.0.0
+  repository: https://charts.ververica.com

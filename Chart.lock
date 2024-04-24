@@ -2,5 +2,8 @@ dependencies:
 - name: ververica-platform
   repository: https://charts.ververica.com
   version: 5.8.2
-digest: sha256:9c108f850d1d5446fa5b1da2993eb4fabd32ac58e2c18f74fb31ca6ad4a35e63
-generated: "2024-03-26T14:04:45.478015858+01:00"
+- name: ververica-platform-crd
+  repository: https://charts.ververica.com
+  version: 1.0.0
+digest: sha256:4e748b6f8c5d5db547275826640b84445908dd093ef7975ceff10d93df5d84a1
+generated: "2024-04-24T11:11:48.417257889+02:00"
