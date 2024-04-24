@@ -50,5 +50,5 @@ spec:
           logging:
             loggingProfile: default
             log4jLoggers:
-            "": INFO
-            org.apache.flink.streaming.examples: DEBUG
+              "": INFO
+              org.apache.flink.streaming.examples: DEBUG
