@@ -14,6 +14,11 @@ azure:
 
 ververica-platform:
   vvp:
+    k8sOperator:
+      enabled: true
+      identity: "vvp-1"
+      watchedNamespaces:
+        - ververica
     auth:
       enabled: true
       admins:

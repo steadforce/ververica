@@ -1,5 +1,5 @@
-kind: Deployment
-apiVersion: v1
+kind: VvpDeployment
+apiVersion: ververica.platform/v1
 metadata:
   name: top-speed-windowing-example
   displayName: TopSpeedWindowing Example
@@ -7,51 +7,48 @@ metadata:
   labels:
     env: testing
 spec:
-  state: RUNNING
-  deploymentTargetName: test
-  restoreStrategy:
-    kind: LATEST_STATE
-  upgradeStrategy:
-    kind:  STATEFUL
-  maxSavepointCreationAttempts: 4
-  maxJobCreationAttempts: 4
-  jobFailureExpirationTime: 0
-  template:
-    metadata:
-      annotations:
-        flink.queryable-state.enabled: 'false'
-        flink.security.ssl.enabled: 'false'
-    spec:
-      artifact:
-        kind: jar
-        jarUri: https://repo1.maven.org/maven2/org/apache/flink/flink-examples-streaming_2.12/1.17.2/flink-examples-streaming_2.12-1.17.2-TopSpeedWindowing.jar
-        mainArgs: --windowSize 10 --windowUnit minutes
-        entryClass: org.apache.flink.streaming.examples.windowing.TopSpeedWindowing
-        flinkVersion: 1.17
-        flinkImageRegistry: registry.ververica.com/v2.12
-        flinkImageRepository: flink
-        flinkImageTag: 1.17.2-stream1-scala_2.12-java11
-      flinkConfiguration:
-        execution.checkpointing.externalized-checkpoint-retention: RETAIN_ON_CANCELLATION
-        execution.checkpointing.interval: 10s
-        high-availability: vvp-kubernetes
-        state.backend: filesystem
-      parallelism: 2
-      numberOfTaskManagers: 2
-      resources:
-        jobManager:
-          cpu: 1
-          memory: 1g
-        taskManager:
-          cpu: 1.0
-          memory: 2g
-      logging:
-        loggingProfile: default
-        log4jLoggers:
+  syncingMode: PATCH
+  deployment:
+    state: RUNNING
+    deploymentTargetName: test
+    restoreStrategy:
+      kind: LATEST_STATE
+    upgradeStrategy:
+      kind:  STATEFUL
+    maxSavepointCreationAttempts: 4
+    maxJobCreationAttempts: 4
+    jobFailureExpirationTime: 0
+    template:
+      metadata:
+        annotations:
+          flink.queryable-state.enabled: 'false'
+          flink.security.ssl.enabled: 'false'
+      spec:
+        artifact:
+          kind: jar
+          jarUri: https://repo1.maven.org/maven2/org/apache/flink/flink-examples-streaming_2.12/1.17.2/flink-examples-streaming_2.12-1.17.2-TopSpeedWindowing.jar
+          mainArgs: --windowSize 10 --windowUnit minutes
+          entryClass: org.apache.flink.streaming.examples.windowing.TopSpeedWindowing
+          flinkVersion: 1.17
+          flinkImageRegistry: registry.ververica.com/v2.12
+          flinkImageRepository: flink
+          flinkImageTag: 1.17.2-stream1-scala_2.12-java11
+        flinkConfiguration:
+          execution.checkpointing.externalized-checkpoint-retention: RETAIN_ON_CANCELLATION
+          execution.checkpointing.interval: 10s
+          high-availability: vvp-kubernetes
+          state.backend: filesystem
+        parallelism: 2
+        numberOfTaskManagers: 2
+        resources:
+          jobManager:
+            cpu: 1
+            memory: 1g
+          taskManager:
+            cpu: 1.0
+            memory: 2g
+        logging:
+          loggingProfile: default
+          log4jLoggers:
           "": INFO
           org.apache.flink.streaming.examples: DEBUG
-      kubernetes:
-        pods:
-          envVars:
-          - name: KEY
-            value: VALUE
