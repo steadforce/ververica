@@ -6,7 +6,7 @@ spec:
   syncingMode: PATCH
   deployment:
     userMetadata:
-      name: window-example
+      name: top-speed-windowing-example
       namespace: default
     spec:
       state: RUNNING
