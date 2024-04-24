@@ -23,13 +23,13 @@ spec:
     spec:
       artifact:
         kind: jar
-        jarUri: https://repo1.maven.org/maven2/org/apache/flink/flink-examples-streaming_2.12/{flinkRelease}/flink-examples-streaming_2.12-{flinkRelease}-TopSpeedWindowing.jar
+        jarUri: https://repo1.maven.org/maven2/org/apache/flink/flink-examples-streaming_2.12/1.17.2/flink-examples-streaming_2.12-1.17.2-TopSpeedWindowing.jar
         mainArgs: --windowSize 10 --windowUnit minutes
         entryClass: org.apache.flink.streaming.examples.windowing.TopSpeedWindowing
-        flinkVersion: {flinkVersion}
-        flinkImageRegistry: registry.ververica.com/v{shortVersion}
+        flinkVersion: 1.17
+        flinkImageRegistry: registry.ververica.com/v2.12
         flinkImageRepository: flink
-        flinkImageTag: {ververicaFlinkRelease}-scala_2.12
+        flinkImageTag: 1.17.2-stream1-scala_2.12
       flinkConfiguration:
         execution.checkpointing.externalized-checkpoint-retention: RETAIN_ON_CANCELLATION
         execution.checkpointing.interval: 10s
