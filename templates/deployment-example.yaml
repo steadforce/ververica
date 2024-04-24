@@ -29,7 +29,7 @@ spec:
             jarUri: https://repo1.maven.org/maven2/org/apache/flink/flink-examples-streaming_2.12/1.17.2/flink-examples-streaming_2.12-1.17.2-TopSpeedWindowing.jar
             mainArgs: --windowSize 10 --windowUnit minutes
             entryClass: org.apache.flink.streaming.examples.windowing.TopSpeedWindowing
-            flinkVersion: 1.17
+            flinkVersion: "1.17"
             flinkImageRegistry: registry.ververica.com/v2.12
             flinkImageRepository: flink
             flinkImageTag: 1.17.2-stream1-scala_2.12-java11
@@ -42,11 +42,11 @@ spec:
           numberOfTaskManagers: 2
           resources:
             jobManager:
-              cpu: 1
+              cpu: 0.5
               memory: 1g
             taskManager:
-              cpu: 1.0
-              memory: 2g
+              cpu: 0.5
+              memory: 1g
           logging:
             loggingProfile: default
             log4jLoggers:
