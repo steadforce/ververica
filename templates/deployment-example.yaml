@@ -3,11 +3,12 @@ apiVersion: v1
 metadata:
   name: top-speed-windowing-example
   displayName: TopSpeedWindowing Example
+  namespace: default
   labels:
     env: testing
 spec:
   state: RUNNING
-  deploymentTargetName: default
+  deploymentTargetName: test
   restoreStrategy:
     kind: LATEST_STATE
   upgradeStrategy:
