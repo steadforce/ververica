@@ -69,6 +69,46 @@ ververica-platform:
         coreSize: 1
         maxSize: 1
 
+    flinkVersionMetadata:
+      - flinkImageRegistry: docker pull ghcr.io/steadforce/applications/ververica-sql-session-cluster-steadforce
+        flinkImageRepository: flink
+        flinkVersion: 1.18
+        imageTag: sha-6e2126d
+        useForSqlDeployments: true
+        defaultFor:
+          - 1.18
+
+    globalSessionClusterDefaults: |
+      spec:
+        kubernetes:
+          jobManagerPodTemplate: 
+            spec:
+              containers:
+                - name: flink-jobmanager
+                  env:
+                    - name: HADOOP_CONF_DIR
+                      value: /etc/hadoop/conf
+                  volumeMounts:
+                    - name: hadoop-s3-creds
+                      mountPath: /etc/hadoop/conf 
+              volumes:
+                - name: hadoop-s3-creds
+                  secret:
+                    secretName: s3-creds-secret
+          taskManagerPodTemplate: 
+            spec:
+              containers:
+                - name: flink-taskmanager
+                  env:
+                    - name: HADOOP_CONF_DIR
+                      value: /etc/hadoop/conf
+                  volumeMounts:
+                    - name: hadoop-s3-creds
+                      mountPath: /etc/hadoop/conf 
+              volumes:
+                - name: hadoop-s3-creds
+                  secret:
+                    secretName: s3-creds-secret
           
   blobStorageCredentials:
     existingSecret: minio-cred-secret-mirror
@@ -85,12 +125,28 @@ ververica-platform:
         memory: 1Gi
       requests:
         memory: 1Gi
+    image:
+      repository: ghcr.io/steadforce/applications/ververica-connector-gateway-steadforce
+      tag: sha-eb3f3d1
 
   licenseConfigPath: file:/etc/vvp-licenses/license.yaml
   volumes:
     - name: license
       secret:
         secretName: ververica-license
+    - name: hadoop-s3-creds
+      secret:
+        secretName: s3-creds-secret
   volumeMounts:
     - name: license
       mountPath: /etc/vvp-licenses/
+    - name: hadoop-s3-creds
+      mountPath: /etc/hadoop/conf
+  env:
+    - name: HADOOP_CONF_DIR
+      value: /etc/hadoop/conf
+
+
+
+
+
