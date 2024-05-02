@@ -2,6 +2,9 @@ kind: VvpDeployment
 apiVersion: ververica.platform/v1
 metadata:
   name: top-speed-windowing-example
+  annotations:
+    # ensure that we deploy this after ververica rollout
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   syncingMode: PATCH
   deployment:
