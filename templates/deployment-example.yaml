@@ -12,15 +12,15 @@ spec:
       name: top-speed-windowing-example
       namespace: default
     spec:
-      state: RUNNING
+      deploymentTargetId: null
       deploymentTargetName: test
-      restoreStrategy:
-        kind: LATEST_STATE
-      upgradeStrategy:
-        kind:  STATEFUL
-      maxSavepointCreationAttempts: 4
       maxJobCreationAttempts: 4
-      jobFailureExpirationTime: 0
+      maxSavepointCreationAttempts: 4
+      restoreStrategy:
+        allowNonRestoredState: false
+        kind: LATEST_STATE
+      sessionClusterName: null
+      state: RUNNING
       template:
         metadata:
           annotations:
@@ -28,31 +28,36 @@ spec:
             flink.security.ssl.enabled: 'false'
         spec:
           artifact:
-            kind: jar
-            jarUri: https://repo1.maven.org/maven2/org/apache/flink/flink-examples-streaming_2.12/1.17.2/flink-examples-streaming_2.12-1.17.2-TopSpeedWindowing.jar
-            mainArgs: --windowSize 10 --windowUnit minutes
             entryClass: org.apache.flink.streaming.examples.windowing.TopSpeedWindowing
-            flinkVersion: "1.17"
             flinkImageRegistry: registry.ververica.com/v2.12
             flinkImageRepository: flink
             flinkImageTag: 1.17.2-stream1-scala_2.12-java11
+            flinkVersion: '1.17'
+            jarUri: >-
+              https://repo1.maven.org/maven2/org/apache/flink/flink-examples-streaming_2.12/1.17.2/flink-examples-streaming_2.12-1.17.2-TopSpeedWindowing.jar
+            kind: JAR
+            mainArgs: '--windowSize 10 --windowUnit minutes'
           flinkConfiguration:
             execution.checkpointing.externalized-checkpoint-retention: RETAIN_ON_CANCELLATION
             execution.checkpointing.interval: 10s
+            execution.checkpointing.min-pause: 10s
             high-availability: kubernetes
             metrics.reporter.prom.factory.class: org.apache.flink.metrics.prometheus.PrometheusReporterFactory
             state.backend: filesystem
-          parallelism: 2
-          numberOfTaskManagers: 2
-          resources:
-            jobManager:
-              cpu: 0.5
-              memory: 1g
-            taskManager:
-              cpu: 0.5
-              memory: 1g
+            taskmanager.memory.managed.fraction: '0.0'
+            taskmanager.numberOfTaskSlots: '1'
+            web.cancel.enable: 'false'
           logging:
-            loggingProfile: default
             log4jLoggers:
-              "": INFO
-              org.apache.flink.streaming.examples: DEBUG
+              '': INFO
+            loggingProfile: default
+          parallelism: 1
+          resources:
+            jobmanager:
+              cpu: 1
+              memory: 1G
+            taskmanager:
+              cpu: 1
+              memory: 2G
+      upgradeStrategy:
+        kind: STATEFUL
