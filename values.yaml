@@ -70,7 +70,7 @@ ververica-platform:
         maxSize: 1
 
     flinkVersionMetadata:
-      - flinkImageRegistry: docker pull ghcr.io/steadforce/applications/ververica-sql-session-cluster-steadforce
+      - flinkImageRegistry: ghcr.io/steadforce/applications/ververica-sql-session-cluster-steadforce
         flinkImageRepository: flink
         flinkVersion: 1.18
         imageTag: sha-6e2126d
