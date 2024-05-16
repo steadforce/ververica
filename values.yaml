@@ -73,7 +73,7 @@ ververica-platform:
       - flinkImageRegistry: ghcr.io/steadforce/applications/ververica-sql-session-cluster-steadforce
         flinkImageRepository: flink
         flinkVersion: 1.18
-        imageTag: sha-6e2126d
+        imageTag: sha-7a77856
         useForSqlDeployments: true
         defaultFor:
           - 1.18
