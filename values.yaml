@@ -70,13 +70,14 @@ ververica-platform:
         maxSize: 1
 
     flinkVersionMetadata:
-      - flinkImageRegistry: ghcr.io/steadforce/applications/ververica-sql-session-cluster-steadforce
-        flinkImageRepository: flink
-        flinkVersion: 1.18
+      - flinkVersion: 1.18
         imageTag: sha-7a77856
         useForSqlDeployments: true
         defaultFor:
           - 1.18
+    flinkDeploymentDefaults:
+      registry: ghcr.io/steadforce/applications/ververica-sql-session-cluster-steadforce
+      repository: flink
 
     globalSessionClusterDefaults: |
       spec:
