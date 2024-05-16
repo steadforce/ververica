@@ -71,7 +71,7 @@ ververica-platform:
 
     flinkVersionMetadata:
       - flinkVersion: 1.18
-        imageTag: sha-7a77856
+        imageTag: sha-b744108
         useForSqlDeployments: true
         defaultFor:
           - 1.18
