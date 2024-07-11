@@ -60,6 +60,9 @@ ververica-platform:
 
   ### Reduce gateway container memory requests.
   gateway:
+    image:
+      repository: ghcr.io/steadforce/applications/ververica-connector-gateway-steadforce
+      tag: oracle-cdc
     resources:
       limits:
         memory: 1Gi
