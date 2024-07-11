@@ -53,11 +53,6 @@ ververica-platform:
   blobStorageCredentials:
     existingSecret: minio-cred-secret-mirror
 
-  ### Allow Ververica Platform to manage Apache Flink deployments in "vvp-jobs" namespace
-  rbac:
-    additionalNamespaces:
-    - ververica-jobs
-
   ### Reduce gateway container memory requests.
   gateway:
     image:
