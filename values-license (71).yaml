@@ -1,24 +1,24 @@
 vvp:
   license:
     data: {
-  "kind" : "License",
-  "apiVersion" : "v1",
-  "metadata" : {
-    "id" : "9a27ebef-9d72-48dc-8e9f-00ea1e681881",
-    "createdAt" : "2025-01-14T12:50:06.363283Z",
-    "annotations" : {
-      "signature" : "iQIcBAABCAAGBQJnhl1+AAoJEKio0mvM9xxR0RIQAI9//puzZrySXWGgfrKXprZ9zNXmO27j8mfGSsSe5A2/WH40zuelnVDqeLhsG6pP9TBc3hinmEJp82ITp4+FUqkqdBl8L4XCdVNECjGousa2w/0e8k7cSyibmVFsslb+QMtJGPFBIW5kHtTStPy657uhD1OJbdKR0SGoZM9RRVPLOjSuje9DGqhsnjBorSt4XxgYmaBfQru8ambGsMbxO32LIOGPlxyx8erXbu39KO3BKMhkp7/MFbSa4q2GDCrjiPwS7bnMnjQ4oyF7UF0gQHp+MA/psEBBYIZ+tEmdoEbIfKksVGSgDlmwOLfyuCi0cs/Nk2XvuXhkudmfG7nIs0nM5xQP+Wylo7m9U8vjb31NTiHMG3uevARMK5/PwBM+lcmfybTzrGJFaKNn7teq+nIjdbsJmA091LBso623ygQz0D6qJXQbaNXgmjjr762I1EKg1LW7iwYXWjxwXQc1TgzaQsMB4QzVqJITARyDOu7RIYT9EMr+GE5OiZyl29oluceG+z0uc9wld0DgPzo1H/WNdO/qBI9II9l+NtNWuzoJIh3/nMI6ELh13Z1KQ94n3TBCwhFpe5BOs6bgGCEmtgC7LgoIPUbikTsh5SniN5pEDVmdlbAp97sfe0CsDMX0r1HzvOJvlQQCNt64Hxdq1/7Kt6WH5wK8upHO9Rycj7pw",
-      "licenseSpec" : "ewogICJsaWNlbnNlSWQiIDogIjlhMjdlYmVmLTlkNzItNDhkYy04ZTlmLTAwZWExZTY4MTg4MSIsCiAgImxpY2Vuc2VkVG8iIDogIlN0ZWFkZm9yY2UiLAogICJleHBpcmVzIiA6ICIyMDI1LTAzLTEzVDAwOjAwOjAwWiIsCiAgInBhcmFtcyIgOiB7CiAgICAicXVvdGEudHlwZSIgOiAiVU5MSU1JVEVEIiwKICAgICJ0cmlhbCIgOiAidHJ1ZSIsCiAgICAibm90Rm9yUmVzYWxlIiA6ICJmYWxzZSIKICB9Cn0="
+      "kind" : "License",
+      "apiVersion" : "v1",
+      "metadata" : {
+        "id" : "9a27ebef-9d72-48dc-8e9f-00ea1e681881",
+        "createdAt" : "2025-01-14T12:50:06.363283Z",
+        "annotations" : {
+          "signature" : "iQIcBAABCAAGBQJnhl1+AAoJEKio0mvM9xxR0RIQAI9//puzZrySXWGgfrKXprZ9zNXmO27j8mfGSsSe5A2/WH40zuelnVDqeLhsG6pP9TBc3hinmEJp82ITp4+FUqkqdBl8L4XCdVNECjGousa2w/0e8k7cSyibmVFsslb+QMtJGPFBIW5kHtTStPy657uhD1OJbdKR0SGoZM9RRVPLOjSuje9DGqhsnjBorSt4XxgYmaBfQru8ambGsMbxO32LIOGPlxyx8erXbu39KO3BKMhkp7/MFbSa4q2GDCrjiPwS7bnMnjQ4oyF7UF0gQHp+MA/psEBBYIZ+tEmdoEbIfKksVGSgDlmwOLfyuCi0cs/Nk2XvuXhkudmfG7nIs0nM5xQP+Wylo7m9U8vjb31NTiHMG3uevARMK5/PwBM+lcmfybTzrGJFaKNn7teq+nIjdbsJmA091LBso623ygQz0D6qJXQbaNXgmjjr762I1EKg1LW7iwYXWjxwXQc1TgzaQsMB4QzVqJITARyDOu7RIYT9EMr+GE5OiZyl29oluceG+z0uc9wld0DgPzo1H/WNdO/qBI9II9l+NtNWuzoJIh3/nMI6ELh13Z1KQ94n3TBCwhFpe5BOs6bgGCEmtgC7LgoIPUbikTsh5SniN5pEDVmdlbAp97sfe0CsDMX0r1HzvOJvlQQCNt64Hxdq1/7Kt6WH5wK8upHO9Rycj7pw",
+          "licenseSpec" : "ewogICJsaWNlbnNlSWQiIDogIjlhMjdlYmVmLTlkNzItNDhkYy04ZTlmLTAwZWExZTY4MTg4MSIsCiAgImxpY2Vuc2VkVG8iIDogIlN0ZWFkZm9yY2UiLAogICJleHBpcmVzIiA6ICIyMDI1LTAzLTEzVDAwOjAwOjAwWiIsCiAgInBhcmFtcyIgOiB7CiAgICAicXVvdGEudHlwZSIgOiAiVU5MSU1JVEVEIiwKICAgICJ0cmlhbCIgOiAidHJ1ZSIsCiAgICAibm90Rm9yUmVzYWxlIiA6ICJmYWxzZSIKICB9Cn0="
+        }
+      },
+      "spec" : {
+        "licenseId" : "9a27ebef-9d72-48dc-8e9f-00ea1e681881",
+        "licensedTo" : "Steadforce",
+        "expires" : "2025-03-13T00:00:00Z",
+        "params" : {
+          "quota.type" : "UNLIMITED",
+          "trial" : "true",
+          "notForResale" : "false"
+        }
+      }
     }
-  },
-  "spec" : {
-    "licenseId" : "9a27ebef-9d72-48dc-8e9f-00ea1e681881",
-    "licensedTo" : "Steadforce",
-    "expires" : "2025-03-13T00:00:00Z",
-    "params" : {
-      "quota.type" : "UNLIMITED",
-      "trial" : "true",
-      "notForResale" : "false"
-    }
-  }
-}
