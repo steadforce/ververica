@@ -1,7 +1,11 @@
+{{ $vvp := index .Values "ververica-platform" }}
+{{- range $namespace := $vvp.rbac.additionalNamespaces }}
+---
 apiVersion: v1
 kind: Namespace
 metadata:
   labels:
     istio-injection: disabled
-    name: "vvp-jobs"
-  name: "vvp-jobs"
+    name: {{ $namespace | quote }}
+  name: {{ $namespace | quote }}
+{{- end }}
